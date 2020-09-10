@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import '../containers/App.css';
-import Scroll from '../components/Scroll';
+// import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 
 import { setSearchField } from '../actions'
@@ -47,11 +47,11 @@ class App extends Component {
             <div className='tc'>
                 <h1>RoboFriends</h1>
                 <SearchBox searchChange={onSearchChange} />
-                <Scroll>
+                {/* <Scroll> */}
                     <ErrorBoundry>
                         <CardList robots={filteredRobots}/>
                     </ErrorBoundry>
-                </Scroll>
+                {/* </Scroll> */}
             </div>
         );
     }
